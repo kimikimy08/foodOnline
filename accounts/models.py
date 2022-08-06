@@ -14,6 +14,7 @@ class UserManager(BaseUserManager):
         if not username:
             raise ValueError('User must have an username')
         
+        
         user = self.model(
             email = self.normalize_email(email), #lowercase email
             username = username,
